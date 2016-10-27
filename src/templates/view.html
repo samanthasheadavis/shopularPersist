@@ -4,13 +4,13 @@
 <body ng-controller='ProductsController as products'>
         <table>
           <tr>
-            <th>Name</th>
-            <th>Price</th>
-            <th>Quantity</th>
-            <th>Color</th>
+            <th ng-click="orderByField='name'; reverseSort = !reverseSort">Name</th>
+            <th ng-click="orderByField='totalPrice'; reverseSort = !reverseSort">Price</th>
+            <th ng-click="orderByField='quantity'; reverseSort = !reverseSort">Quantity</th>
+            <th ng-click="orderByField='color'; reverseSort = !reverseSort">Color</th>
             <th>Sale</th>
           </tr>
-            <tr ng-repeat="item in products.allProducts">
+            <tr ng-repeat="item in products.allProducts|orderBy:orderByField:reverseSort">
                 <td>{{item.name}}</td>
                 <td>{{item.totalPrice | currency}}</td>
                 <td>{{item.quantity}}</td>

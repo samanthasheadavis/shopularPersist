@@ -1,3 +1,52 @@
-<p>
-  Add stuff here!
-</p>
+
+<div class="productsContainer">
+
+  <form name="inputForm" class="add" novalidate ng-submit="inputForm.$valid && products.addItems()"  >
+
+    <label for="name">Name</label>
+
+    <input
+    ng-model="products.newItem.name"
+    ng-class="{'invalid': inputForm.name.$error.minlength}"
+    ng-minlength = "products.minLength"
+    required = "true"
+    type="text"
+    name="name">
+
+    <label for="price">Price</label>
+
+    <input
+    ng-model="products.newItem.price"
+    type="number"
+    name="price">
+
+    <label for="quantity">Quantity</label>
+
+    <input
+    ng-model="products.newItem.quantity"
+    type="number"
+    name="quantity">
+
+    <label for="color">Color</label>
+
+    <input
+    ng-model="products.newItem.color"
+    ng-class="{'invalid': inputForm.color.$error.minlength}"
+    ng-minlength = "products.minLength"
+    type="text"
+    name="color">
+
+    <label for="discount">Discount</label>
+
+    <input
+    ng-model="products.newItem.discount"
+    type="number"
+    name="discount">
+
+    <button
+    type='submit'
+    class="submit"
+    >Send</button>
+
+  </form>
+</div>
