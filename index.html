@@ -1,0 +1,43 @@
+<!doctype html>
+<html lang="en" ng-app="shopularApp">
+
+<head>
+    <title>Shopular</title>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <link rel="stylesheet" href="./node_modules/normalize.css/normalize.css" />
+    <link rel="stylesheet" href="./src/styles/main.css" />
+    <!-- <link rel="stylesheet" href="./src/styles/list.css" />
+    <link rel="stylesheet" href="./src/styles/new.css" /> -->
+    
+</head>
+<body>
+  <nav class="nav">
+      <div class="container">
+          <ul class="nav__list">
+              <li class="listItem">
+                  <a ui-sref = "shopularHome.login">Login</a>
+              </li>
+              <li class="listItem">
+                  <a ui-sref = "shopularHome.view">View Your Products</a>
+              </li>
+              <li class="listItem">
+                  <a ui-sref = "shopularHome.add">Add a Product</a>
+              </li>
+          </ul>
+      </div>
+  </nav>
+
+<div class="container">
+  <ui-view></ui-view>
+</div>
+
+<script src="./node_modules/angular/angular.js"></script>
+<script src="./node_modules/angular-ui-router/release/angular-ui-router.min.js"></script>
+<script src="./node_modules/angular-local-storage/dist/angular-local-storage.min.js"></script>
+<script src="./app.js"></script>
+<!-- <script src="./src/js/controllers/new-woof.controller.js"></script>
+<script src="./src/js/controllers/woofs.controller.js"></script> -->
+
+</body>
