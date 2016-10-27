@@ -1,0 +1,73 @@
+
+$aqua: rgba(#25B7C0, .5);
+$vspace: 10px;
+$hspace: 15px;
+
+body {
+  background: url('assets/symphony.png');
+  font-family: 'Open Sans', sans-serif;;
+}
+h1 {
+  margin-top: 15px;
+  text-align: center;
+  font-size: 40px;
+}
+
+img {
+    width: 20px;
+    height: 20px;
+}
+
+.productsContainer {
+    margin: 0 auto;
+    width: 60%;
+}
+
+table {
+    background: $aqua;
+    margin: 25px auto;
+    color: white;
+    box-shadow: 0px 1px 60px -5px rgba(0,0,0,0.75);
+
+    th {
+      padding: $hspace;
+      text-align: left;
+      font-weight: bold;
+      font-size: 20px;
+      background: rgba(white, .5);
+      cursor: pointer;
+
+      &:hover {
+        background: darken($aqua, 5%);
+      }
+    }
+
+    tr {
+        padding: $hspace;
+        border: 1px solid rgba(white, .2);
+
+        &:nth-child(odd) {
+          background: lighten($aqua, 5%);
+        }
+    }
+
+    td {
+        padding: $hspace;
+
+        &:hover {
+          color: black;
+          transition: all 1s ease;
+          transform: scale(1.5);
+          cursor: pointer;
+        }
+    }
+}
+
+.invalid {
+  border: 2px solid red;
+}
+
+label, input {
+  float: left;
+  display: block;
+}

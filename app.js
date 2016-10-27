@@ -14,7 +14,7 @@ angular.module('shopularApp', ['ui.router', 'LocalStorageModule'])
     }).state('shopularHome.view', {
         url: 'view',
         templateUrl: 'src/templates/view.html',
-        // controller: "ProductsController as products"
+        controller: "ProductsController as products"
     }).state('shopularHome.add', {
         url: 'add',
         templateUrl: 'src/templates/add.html'

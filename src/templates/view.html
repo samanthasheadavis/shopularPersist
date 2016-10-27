@@ -1,4 +1,20 @@
-<p>
-  View your stuff here!
-  {{products.allProducts}}
-</p>
+<header>
+  <h1>Shopular</h1>
+</header>
+<body ng-controller='ProductsController as products'>
+        <table>
+          <tr>
+            <th>Name</th>
+            <th>Price</th>
+            <th>Quantity</th>
+            <th>Color</th>
+            <th>Sale</th>
+          </tr>
+            <tr ng-repeat="item in products.allProducts">
+                <td>{{item.name}}</td>
+                <td>{{item.totalPrice | currency}}</td>
+                <td>{{item.quantity}}</td>
+                <td>{{item.color}}</td>
+                <td><img ng-show='products.onSale(item.discount)' src='http://www.freeiconspng.com/uploads/sales-icon-9.png'></td>
+            </tr>
+        </table>
