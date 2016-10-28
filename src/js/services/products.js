@@ -7,7 +7,11 @@ function getInventory($http) {
       url: '../data/products.json'
     });
   }
+
+
   return {
-    get: fetchProducts
+    get: fetchProducts,
+
   };
+
 }
