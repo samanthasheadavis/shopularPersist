@@ -6,11 +6,12 @@ angular.module('shopularApp', ['ui.router', 'LocalStorageModule'])
     $stateProvider.state('shopularHome', {
         url: '/',
         abstract: true,
-        template: '<ui-view></ui-view>'
+        template: '<ui-view></ui-view>',
+        controller: "LoginController as loginCtrl"
     }).state('shopularHome.login', {
         url: 'login',
         templateUrl: 'src/templates/login.html',
-        // controller: "LoginController as loginCtrl"
+        controller: "LoginController as login"
     }).state('shopularHome.view', {
         url: 'view',
         templateUrl: 'src/templates/view.html',
