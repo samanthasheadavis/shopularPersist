@@ -2,7 +2,7 @@
   <h1>Shopular</h1>
 </header>
 <body ng-controller='ProductsController as products'>
-        <table>
+        <table class='itemView'>
           <tr>
             <th ng-click="orderByField='name'; reverseSort = !reverseSort">Name</th>
             <th ng-click="orderByField='totalPrice'; reverseSort = !reverseSort">Price</th>
@@ -10,11 +10,11 @@
             <th ng-click="orderByField='color'; reverseSort = !reverseSort">Color</th>
             <th>Sale</th>
           </tr>
-            <tr ng-repeat="item in products.allProducts|orderBy:orderByField:reverseSort">
-                <td>{{item.name}}</td>
-                <td>{{item.totalPrice | currency}}</td>
-                <td>{{item.quantity}}</td>
-                <td>{{item.color}}</td>
-                <td><img ng-show='products.onSale(item.discount)' src='http://www.freeiconspng.com/uploads/sales-icon-9.png'></td>
+            <tr class='itemRow' ng-repeat="item in products.allProducts|orderBy:orderByField:reverseSort">
+                <td class='item'>{{item.name}}</td>
+                <td class='item'>{{item.totalPrice | currency}}</td>
+                <td class='item'>{{item.quantity}}</td>
+                <td class='item'>{{item.color}}</td>
+                <td class='item'><img ng-show='products.onSale(item.discount)' src='http://www.freeiconspng.com/uploads/sales-icon-9.png'></td>
             </tr>
         </table>

@@ -1,14 +1,14 @@
 <div class="container" ng-controller="LoginController">
-<table>
+<table class=userInfoTable>
   <tr>
-    <td></td>
-    <td></td>
+    <!-- <td class='userInfo'>Welcome, </td> -->
+    <td class="userInfo">Hi  {{login.getInfo()[0].firstName}} {{login.getInfo()[0].lastName}}!</td>
   </tr>
 </table ng-click="login.test">
 
 <form ng-submit = "login.submit()" ng-controller="LoginController">
-<input type="text" name="firstName" placeholder="First Name" ng-model="login.userInfo.firstName">
-<input type="text" name="lastName" placeholder="Last Name" ng-model="login.userInfo.lastName">
-<button type="submit" name="submitLogin">Login!</button>
+<input class='inputField' type="text" name="firstName" placeholder="First Name" ng-model="login.inputInfo.firstName">
+<input class='inputField' type="text" name="lastName" placeholder="Last Name" ng-model="login.inputInfo.lastName">
+<button class='userInfoBtn' type="submit" name="submitLogin">Login</button>
 </form>
 </div>

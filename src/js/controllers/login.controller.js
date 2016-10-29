@@ -17,7 +17,9 @@ this.inputInfo = {
 
 this.submit = function() {
   this.userInfo.push(this.inputInfo);
-  console.log(this.userInfo.firstName);
+  this.setInfo(this.userInfo);
+  this.userinfo = this.getInfo();
+  console.log(this.getInfo()[0].firstName);
 };
 
 });
