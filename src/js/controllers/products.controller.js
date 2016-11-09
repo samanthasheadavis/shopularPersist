@@ -51,6 +51,4 @@ angular.module('shopularApp').controller('ProductsController', function($state, 
     this.getProducts = function() {
       return localStorageService.get('localStorageProducts') || [];
     };
-
-
 });

@@ -11,7 +11,5 @@ function getInventory($http) {
 
   return {
     get: fetchProducts,
-
   };
-
 }
