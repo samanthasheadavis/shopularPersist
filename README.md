@@ -3,7 +3,13 @@
 
 For this project I continued work on Shopular, this time adding an angular `LocalStorage` service to save the items in the shop's inventory. I also implemented `ui-router` to templatize shopular into sections for adding an item, viewing items and logging in.
 
-[See it on GitHub Pages](https://samanthasheadavis.github.io/shopularPersist/)
+#### How to Run
+1. Download the repository
+2. `cd` into the correct file directory and run ```
+npm install
+```
+3. Run the program locally with the atom Live Server by pressing `ctrl` + `shift` + `3`
+
 #### Languages/Tools
 * AngularJS
 * JavaScript
