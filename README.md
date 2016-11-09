@@ -5,9 +5,7 @@ For this project I continued work on Shopular, this time adding an angular `Loca
 
 #### How to Run
 1. Download the repository
-2. `cd` into the correct file directory and run ```
-npm install
-```
+2. `cd` into the correct file directory and run ```npm install```
 3. Run the program locally with the atom Live Server by pressing `ctrl` + `shift` + `3`
 
 #### Languages/Tools
